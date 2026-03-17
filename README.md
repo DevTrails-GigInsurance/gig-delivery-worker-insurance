@@ -203,3 +203,13 @@ src/
 │
 ├── services/
 │   └── api.js
+
+
+
+🔥 Future Scope:
+
+Integration with real delivery platforms (Swiggy, Zomato)
+
+Advanced ML-based risk prediction
+
+Mobile application deployment
