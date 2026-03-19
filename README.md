@@ -4,7 +4,7 @@
 
 ## Overview
 
-This project introduces an AI-powered parametric insurance platform tailored for gig delivery workers. It delivers affordable, weekly micro-insurance with fully automated payouts triggered by real-world disruption events such as adverse weather, platform outages, and regulatory restrictions.
+This project introduces an AI-powered parametric insurance platform tailored for gig delivery workers. It provides affordable, weekly micro-insurance with fully automated payouts triggered by real-world disruption events such as adverse weather, platform outages, and regulatory restrictions.
 
 By replacing traditional claim-based insurance with real-time event-driven automation, the system ensures zero paperwork, instant compensation, and complete transparency, making financial protection accessible to the gig economy.
 
@@ -22,12 +22,55 @@ Despite this uncertainty, they lack access to affordable insurance, real-time in
 
 We propose a parametric insurance system that leverages real-time data and AI to provide seamless income protection.
 
-- Dynamically calculates premiums based on zone risk and worker activity  
-- Continuously monitors external triggers such as weather, outages, and curfews  
-- Automatically validates and processes claims without user intervention  
-- Instantly disburses payouts to the worker’s wallet or bank account  
+- Dynamically calculates premiums based on risk factors  
+- Continuously monitors real-time disruption triggers  
+- Automatically validates and processes claims  
+- Instantly disburses payouts to the worker  
 
-This approach ensures fast, fair, and frictionless insurance coverage aligned with the needs of gig workers.
+This approach ensures fast, fair, and frictionless insurance coverage aligned with gig workers.
+
+---
+
+## Premium Model
+
+Premium = Base Price × Zone Risk × Worker Risk Score
+
+- **Base Price**: Fixed minimum weekly cost  
+- **Zone Risk**: Based on location (rainfall, flood-prone areas, disruption frequency)  
+- **Worker Risk Score**: Based on activity level, working hours, and reliability  
+
+This ensures personalized and fair pricing.
+
+---
+
+## Parametric Triggers
+
+The system uses predefined external triggers to initiate claims automatically:
+
+- **Weather Trigger**: Heavy rain / flood alerts via Weather APIs  
+- **Platform Trigger**: Delivery platform downtime (e.g., Swiggy/Zomato outages)  
+- **Regulatory Trigger**: Government-imposed curfews or restrictions  
+
+Once triggered, claims are processed without user intervention.
+
+---
+
+## Platform Choice
+
+The system is implemented as a **web-based application** to ensure quick accessibility, faster development, and cross-device compatibility.
+
+It can be extended into a **mobile application** in future phases for better user experience.
+
+---
+
+## AI/ML Integration
+
+AI is integrated into the system to improve automation and decision-making:
+
+- Risk scoring for premium calculation  
+- Fraud detection during claim validation  
+- LLM-based chatbot for user support  
+- AI-generated weekly activity insights  
 
 ---
 
@@ -35,11 +78,11 @@ This approach ensures fast, fair, and frictionless insurance coverage aligned wi
 
 ### Persona: Rahul – Gig Delivery Rider
 
-Rahul is a 28-year-old delivery rider in Mumbai working for platforms like Swiggy and Zomato. He works around 8–10 hours daily and earns based on completed deliveries. His income is highly dependent on weather, platform availability, and city regulations.
+Rahul is a 28-year-old delivery rider in Mumbai working for platforms like Swiggy and Zomato. He works around 8–10 hours daily and earns based on completed deliveries. His income depends on weather, platform availability, and city regulations.
 
-Because he is part of the gig economy, Rahul does not receive traditional employee benefits like insurance or income protection. When events like heavy rain, floods, platform outages, or curfews occur, deliveries stop and he immediately loses income.
+As a gig worker, Rahul does not receive traditional benefits like insurance. When disruptions occur, his earnings stop immediately.
 
-Rahul needs a simple and affordable insurance system that matches his weekly earning cycle and provides automatic compensation when disruptions prevent him from working.
+He needs a simple, low-cost insurance system with automatic payouts.
 
 ---
 
@@ -48,20 +91,21 @@ Rahul needs a simple and affordable insurance system that matches his weekly ear
 - Low-cost insurance suitable for gig workers  
 - Weekly premium payment model  
 - Automatic claim processing without paperwork  
-- Real-time detection of disruption events  
-- Quick payout to wallet or bank account  
+- Real-time disruption detection  
+- Instant payout to wallet or bank  
 
 ---
 
 ### Workflow
 
-1. Rahul registers in the application.  
-2. The system calculates the weekly premium using risk factors.  
-3. Rahul buys a weekly insurance plan.  
-4. The system monitors triggers like rain, platform outages, or curfews.  
-5. If a disruption occurs, the system verifies worker activity.  
-6. The system automatically initiates the payout.  
-7. Rahul receives compensation in his wallet or bank account.  
+1. User registers in the application  
+2. System calculates weekly premium  
+3. User purchases weekly insurance  
+4. System monitors real-time triggers  
+5. Disruption event detected  
+6. System verifies worker activity  
+7. Claim generated automatically  
+8. Instant payout credited  
 
 ---
 
@@ -78,7 +122,7 @@ System Calculates Weekly Premium
 User Purchases Weekly Insurance
         ↓
 System Monitors Parametric Triggers
-(Weather API / Platform Status / Curfew Alerts)
+(Weather / Platform / Curfew APIs)
         ↓
 Trigger Event Detected
         ↓
@@ -86,32 +130,19 @@ System Verifies Worker Activity
         ↓
 Automatic Claim Generation
         ↓
-Payout Sent to Rider Wallet/Bank
+Payout Sent to Wallet/Bank
 ```
 
 ---
 
-## AI (LLM) Integration
-
-The system integrates a Large Language Model to enhance user experience.
-
-### Use Cases
-
-- Chatbot assistance for user queries  
-- Premium explanation  
-- Claim reasoning  
-- Weekly activity reports  
-
----
-
-### Chatbot Workflow
+## AI Chatbot Workflow
 
 ```
 User Question
         ↓
-React Interface
+Frontend (React)
         ↓
-Spring Boot Backend
+Backend (Spring Boot)
         ↓
 LLM API
         ↓
@@ -122,40 +153,40 @@ Displayed to User
 
 ---
 
-### Weekly Report Workflow
+## Weekly Report Workflow
 
 ```
 User Activity Data
         ↓
 Backend Processing
         ↓
-Data sent to LLM
+Sent to LLM
         ↓
-AI generates summary
+AI Generates Summary
         ↓
-Insights displayed
+Insights Displayed
 ```
 
 ---
 
 ## User Journey
 
-Rahul, a delivery rider, opens the insurance app before starting his workday. He checks the weekly insurance plan and sees a small premium calculated based on his delivery zone and activity history.
+Rahul opens the app before starting his workday and checks the weekly insurance plan. The premium is calculated based on his location and activity.
 
-Rahul purchases the weekly plan in a few seconds. During the week, the system continuously monitors weather alerts, platform outages, and government curfews using external APIs.
+He purchases the plan instantly. During the week, the system continuously monitors weather alerts, platform outages, and government restrictions.
 
-One evening, a severe flood alert is issued in Rahul’s delivery zone. Because deliveries stop in that area, the system automatically detects the trigger event and verifies that Rahul was actively working.
+One day, a flood alert occurs in his delivery zone. Deliveries stop, and the system detects the disruption. After verifying his activity, a claim is automatically processed.
 
-Without filing any claim, Rahul receives an automatic payout in his wallet, helping him manage the income loss for that day.
+Rahul receives the payout instantly without filing any request.
 
 ---
 
 ## Key Features
 
-- Low-cost weekly insurance  
+- Affordable weekly insurance  
 - Real-time trigger detection  
 - Fully automated claims  
-- AI-powered explanations  
+- AI-powered assistance  
 - Instant payouts  
 
 ---
@@ -165,7 +196,7 @@ Without filing any claim, Rahul receives an automatic payout in his wallet, help
 Frontend: React  
 Backend: Spring Boot  
 Database: MySQL  
-AI Model: LLM (e.g., Gemini/OpenAI)  
+AI Model: LLM (Gemini/OpenAI)  
 Deployment: AWS  
 
 ---
