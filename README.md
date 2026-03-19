@@ -28,6 +28,7 @@ We propose a parametric insurance system that leverages real-time data and AI to
 - Instantly disburses payouts to the worker’s wallet or bank account  
 
 This approach ensures fast, fair, and frictionless insurance coverage aligned with the needs of gig workers.
+
 ---
 
 ## Persona-Based Requirement & Workflow
@@ -66,31 +67,33 @@ Rahul needs a simple and affordable insurance system that matches his weekly ear
 
 ### Workflow Diagram
 
-User (Delivery Rider)  
-        ↓  
-Register in the App  
-        ↓  
-System Calculates Weekly Premium  
-(Base × ZoneRisk × WorkerRiskScore)  
-        ↓  
-User Purchases Weekly Insurance  
-        ↓  
-System Monitors Parametric Triggers  
-(Weather API / Platform Status / Curfew Alerts)  
-        ↓  
-Trigger Event Detected  
-        ↓  
-System Verifies Worker Activity  
-        ↓  
-Automatic Claim Generation  
-        ↓  
-Payout Sent to Rider Wallet/Bank  
+```
+User (Delivery Rider)
+        ↓
+Register in the App
+        ↓
+System Calculates Weekly Premium
+(Base × ZoneRisk × WorkerRiskScore)
+        ↓
+User Purchases Weekly Insurance
+        ↓
+System Monitors Parametric Triggers
+(Weather API / Platform Status / Curfew Alerts)
+        ↓
+Trigger Event Detected
+        ↓
+System Verifies Worker Activity
+        ↓
+Automatic Claim Generation
+        ↓
+Payout Sent to Rider Wallet/Bank
+```
 
 ---
 
 ## AI (LLM) Integration
 
-The system integrates a Large Language Model (Gemini) to enhance user experience.
+The system integrates a Large Language Model to enhance user experience.
 
 ### Use Cases
 
@@ -103,31 +106,35 @@ The system integrates a Large Language Model (Gemini) to enhance user experience
 
 ### Chatbot Workflow
 
-User Question  
-        ↓  
-React Interface  
-        ↓  
-Spring Boot Backend  
-        ↓  
-Gemini API  
-        ↓  
-AI Response  
-        ↓  
-Displayed to User  
+```
+User Question
+        ↓
+React Interface
+        ↓
+Spring Boot Backend
+        ↓
+LLM API
+        ↓
+AI Response
+        ↓
+Displayed to User
+```
 
 ---
 
 ### Weekly Report Workflow
 
-User Activity Data  
-        ↓  
-Backend Processing  
-        ↓  
-Data sent to LLM  
-        ↓  
-AI generates summary  
-        ↓  
-Insights displayed  
+```
+User Activity Data
+        ↓
+Backend Processing
+        ↓
+Data sent to LLM
+        ↓
+AI generates summary
+        ↓
+Insights displayed
+```
 
 ---
 
@@ -158,7 +165,7 @@ Without filing any claim, Rahul receives an automatic payout in his wallet, help
 Frontend: React  
 Backend: Spring Boot  
 Database: MySQL  
-AI Model: Google Gemini  
+AI Model: LLM (e.g., Gemini/OpenAI)  
 Deployment: AWS  
 
 ---
