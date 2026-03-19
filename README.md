@@ -2,6 +2,31 @@
 
 ---
 
+## Overview
+
+This project is an AI-powered parametric insurance platform designed for gig delivery workers. It provides affordable weekly insurance and automatic payouts during disruption events such as bad weather, platform outages, and government restrictions.
+
+Unlike traditional insurance, this system eliminates manual claim filing by using real-time trigger detection and automation, ensuring fast and transparent payouts.
+
+---
+
+## Problem Statement
+
+Gig delivery workers face unstable income due to external factors like weather, platform downtime, and regulations. They lack affordable insurance, income protection, and efficient claim systems.
+
+---
+
+## Proposed Solution
+
+A parametric insurance system that:
+
+- Calculates premiums dynamically using risk factors  
+- Detects real-time disruption events  
+- Automatically processes claims  
+- Instantly credits payouts to users  
+
+---
+
 ## Persona-Based Requirement & Workflow
 
 ### Persona: Rahul – Gig Delivery Rider
@@ -20,59 +45,182 @@ Rahul needs a simple and affordable insurance system that matches his weekly ear
 - Weekly premium payment model  
 - Automatic claim processing without paperwork  
 - Real-time detection of disruption events  
-- Quick payout to wallet or bank account
+- Quick payout to wallet or bank account  
 
 ---
 
 ### Workflow
 
-1. Rahul registers in the application.
-2. The system calculates the weekly premium using risk factors.
-3. Rahul buys a weekly insurance plan.
-4. The system monitors triggers like rain, platform outages, or curfews.
-5. If a disruption occurs, the system verifies worker activity.
-6. The system automatically initiates the payout.
-7. Rahul receives compensation in his wallet or bank account.
+1. Rahul registers in the application.  
+2. The system calculates the weekly premium using risk factors.  
+3. Rahul buys a weekly insurance plan.  
+4. The system monitors triggers like rain, platform outages, or curfews.  
+5. If a disruption occurs, the system verifies worker activity.  
+6. The system automatically initiates the payout.  
+7. Rahul receives compensation in his wallet or bank account.  
 
 ---
 
 ### Workflow Diagram
 
-User (Delivery Rider)
-        ↓
-Register in the App
-        ↓
-System Calculates Weekly Premium
-(Base × ZoneRisk × WorkerRiskScore)
-        ↓
-User Purchases Weekly Insurance
-        ↓
-System Monitors Parametric Triggers
-(Weather API / Platform Status / Curfew Alerts)
-        ↓
-Trigger Event Detected
-        ↓
-System Verifies Worker Activity
-        ↓
-Automatic Claim Generation
-        ↓
-Payout Sent to Rider Wallet/Bank
+User (Delivery Rider)  
+        ↓  
+Register in the App  
+        ↓  
+System Calculates Weekly Premium  
+(Base × ZoneRisk × WorkerRiskScore)  
+        ↓  
+User Purchases Weekly Insurance  
+        ↓  
+System Monitors Parametric Triggers  
+(Weather API / Platform Status / Curfew Alerts)  
+        ↓  
+Trigger Event Detected  
+        ↓  
+System Verifies Worker Activity  
+        ↓  
+Automatic Claim Generation  
+        ↓  
+Payout Sent to Rider Wallet/Bank  
+
+---
+
+## AI (LLM) Integration
+
+The system integrates a Large Language Model (Gemini) to enhance user experience.
+
+### Use Cases
+
+- Chatbot assistance for user queries  
+- Premium explanation  
+- Claim reasoning  
+- Weekly activity reports  
+
+---
+
+### Chatbot Workflow
+
+User Question  
+        ↓  
+React Interface  
+        ↓  
+Spring Boot Backend  
+        ↓  
+Gemini API  
+        ↓  
+AI Response  
+        ↓  
+Displayed to User  
+
+---
+
+### Weekly Report Workflow
+
+User Activity Data  
+        ↓  
+Backend Processing  
+        ↓  
+Data sent to LLM  
+        ↓  
+AI generates summary  
+        ↓  
+Insights displayed  
 
 ---
 
 ## User Journey
 
-Rahul, a delivery rider, opens the insurance app before starting his workday. 
-He checks the weekly insurance plan and sees a small premium calculated based 
-on his delivery zone and activity history.
+Rahul, a delivery rider, opens the insurance app before starting his workday. He checks the weekly insurance plan and sees a small premium calculated based on his delivery zone and activity history.
 
-Rahul purchases the weekly plan in a few seconds. During the week, the system 
-continuously monitors weather alerts, platform outages, and government curfews 
-using external APIs.
+Rahul purchases the weekly plan in a few seconds. During the week, the system continuously monitors weather alerts, platform outages, and government curfews using external APIs.
 
-One evening, a severe flood alert is issued in Rahul’s delivery zone. Because 
-deliveries stop in that area, the system automatically detects the trigger 
-event and verifies that Rahul was actively working.
+One evening, a severe flood alert is issued in Rahul’s delivery zone. Because deliveries stop in that area, the system automatically detects the trigger event and verifies that Rahul was actively working.
 
-Without filing any claim, Rahul receives an automatic payout in his wallet, 
-helping him manage the income loss for that day.
+Without filing any claim, Rahul receives an automatic payout in his wallet, helping him manage the income loss for that day.
+
+---
+
+## Key Features
+
+- Low-cost weekly insurance  
+- Real-time trigger detection  
+- Fully automated claims  
+- AI-powered explanations  
+- Instant payouts  
+
+---
+
+## Tech Stack
+
+Frontend: React  
+Backend: Spring Boot  
+Database: MySQL  
+AI Model: Google Gemini  
+Deployment: AWS  
+
+---
+
+## Backend Structure
+
+```
+com.insurance.ai
+│
+├── controller
+│   ├── UserController.java
+│   ├── PremiumController.java
+│   ├── ClaimController.java
+│   └── AIController.java
+│
+├── service
+│   ├── PremiumService.java
+│   ├── ClaimService.java
+│   ├── RiskService.java
+│   ├── FraudService.java
+│   └── LLMService.java
+│
+├── model
+│   ├── User.java
+│   ├── Policy.java
+│   ├── Claim.java
+│   └── RiskData.java
+│
+├── repository
+│   ├── UserRepository.java
+│   ├── PolicyRepository.java
+│   └── ClaimRepository.java
+│
+└── dto
+    ├── ChatRequestDTO.java
+    ├── ClaimDTO.java
+    └── PremiumDTO.java
+```
+
+---
+
+## Frontend Structure
+
+```
+src/
+│
+├── components/
+│   ├── Chatbot.jsx
+│   ├── Dashboard.jsx
+│   ├── Premium.jsx
+│   └── Claims.jsx
+│
+├── pages/
+│   ├── Home.jsx
+│   ├── Login.jsx
+│   └── Register.jsx
+│
+├── services/
+│   └── api.js
+```
+
+---
+
+## Future Scope
+
+- Integration with real delivery platforms (Swiggy, Zomato)  
+- Advanced ML-based risk prediction  
+- Mobile application deployment  
