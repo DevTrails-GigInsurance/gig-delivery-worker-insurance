@@ -4,27 +4,30 @@
 
 ## Overview
 
-This project is an AI-powered parametric insurance platform designed for gig delivery workers. It provides affordable weekly insurance and automatic payouts during disruption events such as bad weather, platform outages, and government restrictions.
+This project introduces an AI-powered parametric insurance platform tailored for gig delivery workers. It delivers affordable, weekly micro-insurance with fully automated payouts triggered by real-world disruption events such as adverse weather, platform outages, and regulatory restrictions.
 
-Unlike traditional insurance, this system eliminates manual claim filing by using real-time trigger detection and automation, ensuring fast and transparent payouts.
+By replacing traditional claim-based insurance with real-time event-driven automation, the system ensures zero paperwork, instant compensation, and complete transparency, making financial protection accessible to the gig economy.
 
 ---
 
 ## Problem Statement
 
-Gig delivery workers face unstable income due to external factors like weather, platform downtime, and regulations. They lack affordable insurance, income protection, and efficient claim systems.
+Gig delivery workers operate in a highly volatile environment where income is directly impacted by external disruptions such as weather conditions, platform failures, and government-imposed restrictions.
+
+Despite this uncertainty, they lack access to affordable insurance, real-time income protection, and efficient claim mechanisms. Existing insurance solutions are slow, complex, and not designed for dynamic, short-term earning models.
 
 ---
 
 ## Proposed Solution
 
-A parametric insurance system that:
+We propose a parametric insurance system that leverages real-time data and AI to provide seamless income protection.
 
-- Calculates premiums dynamically using risk factors  
-- Detects real-time disruption events  
-- Automatically processes claims  
-- Instantly credits payouts to users  
+- Dynamically calculates premiums based on zone risk and worker activity  
+- Continuously monitors external triggers such as weather, outages, and curfews  
+- Automatically validates and processes claims without user intervention  
+- Instantly disburses payouts to the worker’s wallet or bank account  
 
+This approach ensures fast, fair, and frictionless insurance coverage aligned with the needs of gig workers.
 ---
 
 ## Persona-Based Requirement & Workflow
