@@ -1,84 +1,117 @@
-🛡️ Gig Delivery Worker Insurance
-AI-Powered Parametric Insurance for Gig Workers
-📌 Overview
+# Gig Delivery Worker Insurance
 
-This project presents an AI-powered parametric insurance platform designed for gig delivery workers. The system provides affordable weekly insurance coverage and ensures automatic payouts during disruption events such as adverse weather conditions, platform outages, and government-imposed restrictions.
+---
 
-Unlike traditional insurance systems, this solution eliminates manual claim filing by leveraging real-time event detection and intelligent automation, ensuring a seamless and transparent user experience.
+## Overview
 
-👤 Persona-Based Requirement
-Persona: Rahul – Gig Delivery Rider
+This project introduces an AI-powered parametric insurance platform tailored for gig delivery workers. It provides affordable, weekly micro-insurance with fully automated payouts triggered by real-world disruption events such as adverse weather, platform outages, and regulatory restrictions.
 
-Rahul is a 28-year-old delivery rider in Mumbai working with platforms like Swiggy and Zomato. He works approximately 8–10 hours daily and earns based on completed deliveries.
+By replacing traditional claim-based insurance with real-time event-driven automation, the system ensures zero paperwork, instant compensation, and complete transparency, making financial protection accessible to the gig economy.
 
-His income is highly dependent on:
+---
 
-Weather conditions (rain, floods)
+## Problem Statement
 
-Platform availability
+Gig delivery workers operate in a highly volatile environment where income is directly impacted by external disruptions such as weather conditions, platform failures, and government-imposed restrictions.
 
-City regulations
+Despite this uncertainty, they lack access to affordable insurance, real-time income protection, and efficient claim mechanisms. Existing insurance solutions are slow, complex, and not designed for dynamic, short-term earning models.
 
-As a gig worker, Rahul does not receive traditional employment benefits such as insurance or income protection. When disruptions occur, his earnings stop immediately.
+---
 
-🎯 Problem Statement
+## Proposed Solution
 
-Gig delivery workers face:
+We propose a parametric insurance system that leverages real-time data and AI to provide seamless income protection.
 
-Lack of affordable insurance solutions
+- Dynamically calculates premiums based on risk factors  
+- Continuously monitors real-time disruption triggers  
+- Automatically validates and processes claims  
+- Instantly disburses payouts to the worker  
 
-No income protection during disruptions
+This approach ensures fast, fair, and frictionless insurance coverage aligned with gig workers.
 
-Complex and slow claim processes
+---
 
-Absence of real-time risk-based coverage
+## Premium Model
 
-💡 Proposed Solution
+Premium = Base Price × Zone Risk × Worker Risk Score
 
-A parametric insurance system that:
+- **Base Price**: Fixed minimum weekly cost  
+- **Zone Risk**: Based on location (rainfall, flood-prone areas, disruption frequency)  
+- **Worker Risk Score**: Based on activity level, working hours, and reliability  
 
-Calculates premiums based on dynamic risk factors
+This ensures personalized and fair pricing.
 
-Uses real-time triggers (weather, outages, curfews)
+---
 
-Enables automatic claim processing without paperwork
+## Parametric Triggers
 
-Provides instant payouts to the worker
+The system uses predefined external triggers to initiate claims automatically:
 
-This ensures financial stability for gig workers during uncertain conditions.
+- **Weather Trigger**: Heavy rain / flood alerts via Weather APIs  
+- **Platform Trigger**: Delivery platform downtime (e.g., Swiggy/Zomato outages)  
+- **Regulatory Trigger**: Government-imposed curfews or restrictions  
 
-🧾 Key Features
+Once triggered, claims are processed without user intervention.
 
-💰 Low-cost weekly insurance model
+---
 
-⚡ Automatic claim processing (no manual intervention)
+## Platform Choice
 
-📡 Real-time trigger detection using external APIs
+The system is implemented as a **web-based application** to ensure quick accessibility, faster development, and cross-device compatibility.
 
-🤖 AI-powered explanations and insights using LLM
+It can be extended into a **mobile application** in future phases for better user experience.
 
-💳 Instant payout to wallet or bank account
+---
 
-🔄 System Workflow
-Step-by-Step Process
+## AI/ML Integration
 
-User registers in the application
+AI is integrated into the system to improve automation and decision-making:
 
-System calculates weekly premium using risk factors
+- Risk scoring for premium calculation  
+- Fraud detection during claim validation  
+- LLM-based chatbot for user support  
+- AI-generated weekly activity insights  
 
-User purchases a weekly insurance plan
+---
 
-System continuously monitors parametric triggers
+## Persona-Based Requirement & Workflow
 
-A disruption event is detected
+### Persona: Rahul – Gig Delivery Rider
 
-System verifies user activity
+Rahul is a 28-year-old delivery rider in Mumbai working for platforms like Swiggy and Zomato. He works around 8–10 hours daily and earns based on completed deliveries. His income depends on weather, platform availability, and city regulations.
 
-Claim is automatically generated
+As a gig worker, Rahul does not receive traditional benefits like insurance. When disruptions occur, his earnings stop immediately.
 
-Payout is credited instantly
+He needs a simple, low-cost insurance system with automatic payouts.
 
-🔁 Workflow Diagram
+---
+
+### Persona Requirements
+
+- Low-cost insurance suitable for gig workers  
+- Weekly premium payment model  
+- Automatic claim processing without paperwork  
+- Real-time disruption detection  
+- Instant payout to wallet or bank  
+
+---
+
+### Workflow
+
+1. User registers in the application  
+2. System calculates weekly premium  
+3. User purchases weekly insurance  
+4. System monitors real-time triggers  
+5. Disruption event detected  
+6. System verifies worker activity  
+7. Claim generated automatically  
+8. Instant payout credited  
+
+---
+
+### Workflow Diagram
+
+```
 User (Delivery Rider)
         ↓
 Register in the App
@@ -89,7 +122,7 @@ System Calculates Weekly Premium
 User Purchases Weekly Insurance
         ↓
 System Monitors Parametric Triggers
-(Weather API / Platform Status / Curfew Alerts)
+(Weather / Platform / Curfew APIs)
         ↓
 Trigger Event Detected
         ↓
@@ -97,66 +130,80 @@ System Verifies Worker Activity
         ↓
 Automatic Claim Generation
         ↓
-Payout Sent to Rider Wallet/Bank
-🤖 AI (LLM) Integration
+Payout Sent to Wallet/Bank
+```
 
-The system integrates a Large Language Model (LLM) to enhance user experience and provide intelligent insights.
+---
 
-Use Cases:
+## AI Chatbot Workflow
 
-💬 Chatbot Assistance – Answers user queries
-
-📊 Premium Explanation – Explains pricing decisions
-
-🔍 Claim Analysis – Provides reasoning for claim outcomes
-
-📝 Weekly Reports – Generates personalized activity summaries
-
-🔄 Chatbot Workflow
+```
 User Question
-     ↓
-React Chat Interface
-     ↓
-Spring Boot Backend (AI Controller)
-     ↓
-Gemini API (LLM)
-     ↓
-AI Response Generated
-     ↓
+        ↓
+Frontend (React)
+        ↓
+Backend (Spring Boot)
+        ↓
+LLM API
+        ↓
+AI Response
+        ↓
 Displayed to User
-📝 Weekly Report Workflow
+```
+
+---
+
+## Weekly Report Workflow
+
+```
 User Activity Data
         ↓
 Backend Processing
         ↓
-Data Sent to LLM (Gemini)
+Sent to LLM
         ↓
 AI Generates Summary
         ↓
-Weekly Insights Displayed
-🧭 User Journey
+Insights Displayed
+```
 
-Rahul opens the application before starting his workday and checks the weekly insurance plan. The premium is calculated based on his delivery zone and activity history.
+---
 
-He purchases the plan within seconds. During the week, the system continuously monitors real-time events such as weather alerts, platform outages, and government restrictions.
+## User Journey
 
-One evening, a severe flood alert is issued in Rahul’s delivery zone. Deliveries are halted, and the system detects this disruption. After verifying Rahul’s activity, an automatic payout is initiated.
+Rahul opens the app before starting his workday and checks the weekly insurance plan. The premium is calculated based on his location and activity.
 
-Without filing any claim, Rahul receives compensation directly in his wallet, helping him manage income loss efficiently.
+He purchases the plan instantly. During the week, the system continuously monitors weather alerts, platform outages, and government restrictions.
 
-⚙️ Tech Stack
+One day, a flood alert occurs in his delivery zone. Deliveries stop, and the system detects the disruption. After verifying his activity, a claim is automatically processed.
 
-Frontend: React
+Rahul receives the payout instantly without filing any request.
 
-Backend: Spring Boot
+---
 
-Database: MySQL
+## Key Features
 
-AI Model: Google Gemini (LLM)
+- Affordable weekly insurance  
+- Real-time trigger detection  
+- Fully automated claims  
+- AI-powered assistance  
+- Instant payouts  
 
-Deployment: AWS
+---
 
-🏗️ Backend Structure
+## Tech Stack
+
+Frontend: React  
+Backend: Spring Boot  
+Database: MySQL  
+AI Model: LLM (Gemini/OpenAI)  
+Deployment: AWS  
+
+---
+
+## Backend Structure
+
+```
 com.insurance.ai
 │
 ├── controller
@@ -187,7 +234,13 @@ com.insurance.ai
     ├── ChatRequestDTO.java
     ├── ClaimDTO.java
     └── PremiumDTO.java
-🎨 Frontend Structure
+```
+
+---
+
+## Frontend Structure
+
+```
 src/
 │
 ├── components/
@@ -203,13 +256,12 @@ src/
 │
 ├── services/
 │   └── api.js
+```
 
+---
 
+## Future Scope
 
-🔥 Future Scope:
-
-Integration with real delivery platforms (Swiggy, Zomato)
-
-Advanced ML-based risk prediction
-
-Mobile application deployment
+- Integration with real delivery platforms (Swiggy, Zomato)  
+- Advanced ML-based risk prediction  
+- Mobile application deployment  
